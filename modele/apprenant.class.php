@@ -27,67 +27,70 @@ class apprenant extends functions
 	
     //Ajout voiture
     public function add($cnx){
-        $req=$cnx->prepare("insert into apprenant (nom_apprenant,prenom_apprenant,sexe_apprenant,pseudo_apprenant,pass_apprenant,date_naissance_apprenant,email_apprenant,ville_apprenant,niveau_apprenant) values(?,?,?,?,?,?)");
+        $req=$cnx->prepare("insert into apprenant (nom_apprenant,prenom_apprenant,sexe_apprenant,pseudo_apprenant,pass_apprenant,date_naissance_apprenant,email_apprenant,ville_apprenant,niveau_apprenant) values(?,?,?,?,?,?,?,?,?)");
         $req->bindParam(1,$this->nom_apprenant);
-		$req->bindParam(2,$this->nom_apprenant);
-		$req->bindParam(3,$this->prenom_apprenant);
-		$req->bindParam(4,$this->sexe_apprenant);
-		$req->bindParam(5,$this->pseudo_apprenant);
-		$req->bindParam(6,$this->pass_apprenant);
-		$req->bindParam(7,$this->date_naissance_apprenant);
-		$req->bindParam(8,$this->email_apprenant);
-		$req->bindParam(9,$this->ville_apprenant);
-		$req->bindParam(10,$this->niveau_apprenant);
+		$req->bindParam(2,$this->prenom_apprenant);
+		$req->bindParam(3,$this->sexe_apprenant);
+		$req->bindParam(4,$this->pseudo_apprenant);
+		$req->bindParam(5,$this->pass_apprenant);
+		$req->bindParam(6,$this->date_naissance_apprenant);
+		$req->bindParam(7,$this->email_apprenant);
+		$req->bindParam(8,$this->ville_apprenant);
+		$req->bindParam(9,$this->niveau_apprenant);
 		$req->execute();
-		parent::redirect("index.php?controller=cheque&action=liste");
+		parent::redirect("index.php?controller=apprenant&action=liste");
         }
 		
 	//liste voiture
     public function liste($cnx){
-        $req=$cnx->query("select * from cheque")->fetchAll(PDO::FETCH_OBJ);
+        $req=$cnx->query("select * from apprenant")->fetchAll(PDO::FETCH_OBJ);
 		return $req;
         }
 		
 	//detail voiture
     public function detail($cnx){
-        $req=$cnx->query("select * from cheque where numero=".$this->numero)->fetch(PDO::FETCH_OBJ);
+        $req=$cnx->query("select * from apprenant where id_apprenant=".$this->id_apprenant)->fetch(PDO::FETCH_OBJ);
 		return $req;
         }
 		
 	//Modif voiture
 	public function edit($cnx){
-	$req=$cnx->query("select * from cheque where numero=".$this->numero);
+	$req=$cnx->query("select * from apprenant where id_apprenant=".$this->id_apprenant);
 	$v=$req->fetch(PDO::FETCH_ASSOC);
 	
 
 
 
-      $req=$cnx->prepare("update cheque set montant=?, beneficiere=?, payeur=?, banque=?,date_echeance=?  where numero=?");
-        $req->bindParam(1,$this->montant);
-		$req->bindParam(2,$this->benificiere);
-		$req->bindParam(3,$this->payeur);
-		$req->bindParam(4,$this->banque);
-		$req->bindParam(5,$this->date_echeance);
-		$req->bindParam(6,$this->numero);
-
+      $req=$cnx->prepare("update apprenant set nom_apprenant=?, prenom_apprenant=?, sexe_apprenant=?, pseudo_apprenant=?,pass_apprenant=?,date_naissance_apprenant=?,email_apprenant=?,ville_apprenant=?,niveau_apprenant=?  where id_apprenant=?");
+      
+	  $req->bindParam(1,$this->nom_apprenant);
+		$req->bindParam(2,$this->prenom_apprenant);
+		$req->bindParam(3,$this->sexe_apprenant);
+		$req->bindParam(4,$this->pseudo_apprenant);
+		$req->bindParam(5,$this->pass_apprenant);
+		$req->bindParam(6,$this->date_naissance_apprenant);
+		$req->bindParam(7,$this->email_apprenant);
+		$req->bindParam(8,$this->ville_apprenant);
+		$req->bindParam(9,$this->niveau_apprenant);
+		$req->bindParam(10,$this->id_apprenant);
 		$req->execute();
-		parent::redirect("index.php?controller=cheque&action=liste");
+		parent::redirect("index.php?controller=apprenant&action=liste");
         }
 	
 
     public function etat($cnx,$datedb,$datefn){
 
-        $req=$cnx->query("select * from cheque where date_echeance between '".$datedb."'and'".$datefn."'")->fetchAll(PDO::FETCH_OBJ);
+        $req=$cnx->query("select * from apprenant where date_echeance between '".$datedb."'and'".$datefn."'")->fetchAll(PDO::FETCH_OBJ);
 		return $req;
         }
 
 	//Delete 
     public function delete($cnx){
-	$req=$cnx->query("select * from cheque where numero=".$this->numero);
+	$req=$cnx->query("select * from apprenant where id_apprenant=".$this->id_apprenant);
 	$v=$req->fetch(PDO::FETCH_ASSOC);
 	
-        $req=$cnx->exec("delete from cheque where numero='".$this->numero."'");
-		parent::redirect("index.php?controller=cheque&action=liste");
+        $req=$cnx->exec("delete from cheque where id_apprenant='".$this->id_apprenant."'");
+		parent::redirect("index.php?controller=apprenant&action=liste");
 		}
     } //fin class
 
