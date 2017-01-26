@@ -4,7 +4,7 @@ include 'includes/connexion.php';
 include "modele/fonctions.class.php";
 $fn=new functions();
 $controller="apprenant";
-$action="liste";
+$action="add1";
 
 if(isset($_REQUEST['controller']))
 $controller=$_REQUEST['controller'];
@@ -291,6 +291,15 @@ Bootstrap Date Range Picker
 Below codes are only for index widgets
 ================================================ -->
 <!-- Today Sales -->
+
+<!-- Basic Single Date Picker -->
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#date-picker').daterangepicker({ singleDatePicker: true }, function(start, end, label) {
+    console.log(start.toISOString(), end.toISOString(), label);
+  });
+});
+</script>
 <script>
 
 // set up our data series with 50 random data points
@@ -336,6 +345,15 @@ var hoverDetail = new Rickshaw.Graph.HoverDetail( {
   }
 } );
 
+</script>
+
+<!-- Basic Single Date Picker -->
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#date-picker').daterangepicker({ singleDatePicker: true }, function(start, end, label) {
+    console.log(start.toISOString(), end.toISOString(), label);
+  });
+});
 </script>
 
 <!-- Today Activity -->
