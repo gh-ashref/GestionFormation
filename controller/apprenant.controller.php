@@ -57,7 +57,7 @@ break;
 
 case "etat": 
 $res=$ch->liste($cnx);
-include "view/apprenant/etat.view.php";
+include "view/apprenant/pdf.view.php";
 break;
 
 
@@ -71,6 +71,7 @@ include "view/apprenant/edit.view.php";
 break;
 //etape2 : edit
 case "edit": $ch->edit($cnx);
+include "view/apprenant/liste.view.php";
 break;
 //delete voiture
 case "delete": $ch->delete($cnx);
@@ -80,21 +81,16 @@ case "liste":
 $res=$ch->liste($cnx);
 include "view/apprenant/liste.view.php";
 break;
+
 //export excel
-case "excel": $res=$ch->liste($cnx);
-
-include "view/cheque/excel.view.php";
-break;
-
-case "excel1": $res=$ch->etat($cnx,$datedb,$datefin);
-
+case "excel": 
+$res=$ch->liste($cnx);
 include "view/apprenant/excel.view.php";
 break;
 
-case "etat1": 
-$res=$ch->etat($cnx,$datedb,$datefin);
-include "view/apprenant/affetat.view.php";
-break;
+
+
+
 
 
 

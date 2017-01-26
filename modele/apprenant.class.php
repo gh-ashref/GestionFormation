@@ -78,9 +78,9 @@ class apprenant extends functions
         }
 	
 
-    public function etat($cnx,$datedb,$datefn){
+    public function etat($cnx){
 
-        $req=$cnx->query("select * from apprenant where date_echeance between '".$datedb."'and'".$datefn."'")->fetchAll(PDO::FETCH_OBJ);
+        $req=$cnx->query("select * from apprenant")->fetchAll(PDO::FETCH_OBJ);
 		return $req;
         }
 
@@ -89,7 +89,7 @@ class apprenant extends functions
 	$req=$cnx->query("select * from apprenant where id_apprenant=".$this->id_apprenant);
 	$v=$req->fetch(PDO::FETCH_ASSOC);
 	
-        $req=$cnx->exec("delete from cheque where id_apprenant='".$this->id_apprenant."'");
+        $req=$cnx->exec("delete from apprenant where id_apprenant='".$this->id_apprenant."'");
 		parent::redirect("index.php?controller=apprenant&action=liste");
 		}
     } //fin class

@@ -90,7 +90,7 @@ class formateur extends functions
 	$v=$req->fetch(PDO::FETCH_ASSOC);
 	
         $req=$cnx->exec("delete from formateur where id_formateur='".$this->id_formateur."'");
-		parent::redirect("index.php?controller=apprenant&action=liste");
+		parent::redirect("index.php?controller=formateur&action=liste");
 		}
     } //fin class
 

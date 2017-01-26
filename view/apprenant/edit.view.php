@@ -3,10 +3,11 @@
 
   <!-- Start Page Header -->
    <div class="page-header">
-    <h1 class="title">Ajouter des   Apprenants</h1>
+    <h1 class="title">Edition du Apprenants</h1>
       <ol class="breadcrumb">
         <li class="active">Cette Outils Permet de Gerer les Formations</li>
     </ol>
+
     <!-- Start Page Header Right Div -->
     <div class="right">
       <div class="btn-group" role="group" aria-label="...">
@@ -41,7 +42,7 @@
       <div class="panel panel-default">
 
         <div class="panel-title">
-          Ajout Apprenant
+          Editer Formateur 
           <ul class="panel-tools">
             <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
             <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
@@ -50,20 +51,21 @@
         </div>
 
             <div class="panel-body">
-			<form method="post" class="form-horizontal" action="index.php?controller=apprenant&action=add" enctype="multipart/form-data">
+			<form method="post" class="form-horizontal" action="index.php?controller=apprenant&action=edit&id_apprenant=<?php echo $res->id_apprenant;?>" enctype="multipart/form-data">
+  <?php 
 
-
+?>
                  <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Nom</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-radius" id="input2" name="nom_apprenant">
+                    <input type="text" class="form-control form-control-radius" id="input2" name="nom_apprenant" value="<?php echo $res->nom_apprenant;?>"/>
                   </div>
                 </div>
 				
 				 <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Prenom</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-radius" id="input2" name="prenom_apprenant">
+                    <input type="text" class="form-control form-control-radius" id="input2" name="prenom_apprenant" value="<?php echo $res->prenom_apprenant;?>">
                   </div>
                 </div>
 				
@@ -81,7 +83,7 @@
 				<div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label" >Date Naissance</label>
                   <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-radius" id="input2" name="date_naissance_apprenant">
+                    <input type="date" class="form-control form-control-radius" id="input2" name="date_naissance_apprenant" value="<?php echo $res->date_naissance_apprenant;?>">
                   </div>
                 </div>
 				
@@ -89,35 +91,35 @@
 				 <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Pseudo</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-radius" id="input2" name="pseudo_apprenant">
+                    <input type="text" class="form-control form-control-radius" id="input2" name="pseudo_apprenant" value="<?php echo $res->pseudo_apprenant;?>">
                   </div>
                 </div>
 				
 				 <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Mot de passe</label>
                   <div class="col-sm-10">
-                    <input type="password" class="form-control form-control-radius" id="input2"  name="pass_apprenant">
+                    <input type="password" class="form-control form-control-radius" id="input2"  name="pass_apprenant"  value="<?php echo $res->pass_apprenant;?>">
                   </div>
                 </div>
 				
 				 <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Mail</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-radius" id="input2" name="email_apprenant">
+                    <input type="text" class="form-control form-control-radius" id="input2" name="email_apprenant" value="<?php echo $res->email_apprenant;?>">
                   </div>
                 </div>
 				
 				 <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Ville</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-radius" id="input2" name="ville_apprenant">
+                    <input type="text" class="form-control form-control-radius" id="input2" name="ville_apprenant" value="<?php echo $res->ville_apprenant;?>">
                   </div>
                 </div>
 
 				<div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Niveau</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-radius" id="input2" name="niveau_apprenant">
+                    <input type="text" class="form-control form-control-radius" id="input2" name="niveau_apprenant" value="<?php echo $res->niveau_apprenant;?>">
                   </div>
                 </div>
                 <center>

@@ -2,10 +2,10 @@
 <div class="content">
 
   <!-- Start Page Header -->
-  <div class="page-header">
-    <h1 class="title">Dashboard</h1>
+   <div class="page-header">
+    <h1 class="title">Ajouter des   Formateurs</h1>
       <ol class="breadcrumb">
-        <li class="active">This is a quick overview of some features</li>
+        <li class="active">Cette Outils Permet de Gerer les Formations</li>
     </ol>
 
     <!-- Start Page Header Right Div -->
