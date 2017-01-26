@@ -46,9 +46,14 @@ class groupe extends functions
 		return $req;
         }
 		
+ public function liste2($cnx){
+        $req=$cnx->query("select distinct * from groupe g,formateur f where f.id_formateur=g.id_formateur")->fetchAll(PDO::FETCH_OBJ);
+		return $req;
+        }		
+		
 	//detail voiture
     public function detail($cnx){
-        $req=$cnx->query("select * from groupe where id_groupe=".$this->id_groupe)->fetch(PDO::FETCH_OBJ);
+        $req=$cnx->query("select distinct * from groupe g,formateur f,formation fr where g.id_formation=fr.id_formation and g.id_formateur=f.id_formateur and id_groupe=".$this->id_groupe)->fetch(PDO::FETCH_OBJ);
 		return $req;
         }
 		
@@ -86,7 +91,7 @@ class groupe extends functions
 	$req=$cnx->query("select * from groupe where id_groupe=".$this->id_groupe);
 	$v=$req->fetch(PDO::FETCH_ASSOC);
 	
-        $req=$cnx->exec("delete from cheque where id_groupe='".$this->id_groupe."'");
+        $req=$cnx->exec("delete from groupe where id_groupe='".$this->id_groupe."'");
 		parent::redirect("index.php?controller=groupe&action=liste");
 		}
     } //fin class

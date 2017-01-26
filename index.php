@@ -58,7 +58,7 @@ $action=$_REQUEST['action'];
           <li><a href="index.php?controller=apprenant&action=add1"><i class="fa falist fa-user"></i>Apprenant</a></li>
           <li><a href="index.php?controller=formation&action=add1"><i class="fa falist fa-book"></i>Formation</a></li>
           <li><a href="index.php?controller=formateur&action=add1"><i class="fa falist fa-graduation-cap"></i>Formateur</a></li>
-          <li><a href="#"><i class="fa falist fa-group"></i>Groupe</a></li>
+          <li><a href="index.php?controller=groupe&action=add1"><i class="fa falist fa-group"></i>Groupe</a></li>
         </ul>
     </li>
 

@@ -74,7 +74,7 @@ break;
 //etape1 : edit
 case "edit1": $res=$ch->detail($cnx);
 
-include "view/formation/edit.view.php";
+include "view/groupe/edit.view.php";
 break;
 //etape2 : edit
 case "edit": $ch->edit($cnx);
@@ -84,8 +84,8 @@ case "delete": $ch->delete($cnx);
 break;
 
 case "liste": 
-$res=$ch->liste($cnx);
-include "view/formation/liste.view.php";
+$res=$ch->liste2($cnx);
+include "view/groupe/liste.view.php";
 break;
 //export excel
 case "excel": $res=$ch->liste($cnx);
