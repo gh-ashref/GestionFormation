@@ -35,6 +35,7 @@ class inscrire extends functions
         $req=$cnx->query("select * from inscrire")->fetchAll(PDO::FETCH_OBJ);
 		return $req;
         }
+       
 		
 	//detail voiture
     public function detail($cnx){

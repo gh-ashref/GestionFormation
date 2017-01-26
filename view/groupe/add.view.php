@@ -79,13 +79,20 @@
                   </div>
                 </div>
 
+
                  <div class="form-group">
+                  <label for="input2" class="col-sm-2 control-label form-label">nom groupe</label>
+                  <div class="col-sm-10">
+                    <input type="text"  class="form-control form-control-radius" id="input2" name="nom_groupe">
+                  </div>
+                </div>
+        <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Frais Formation</label>
                   <div class="col-sm-10">
                     <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="frais_formation">
                   </div>
                 </div>
-				
+        
 				 <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Nombre d'heure</label>
                   <div class="col-sm-10">
