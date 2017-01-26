@@ -27,7 +27,7 @@ class formateur extends functions
 	
     //Ajout voiture
     public function add($cnx){
-        $req=$cnx->prepare("insert into apprenant (nom_formateur,prenom_formateur,sexe_formateur,pseudo_formateur,pass_formateur,date_naissance_formateur,email_formateur,ville_formateur,specialite_formateur) values(?,?,?,?,?,?,?,?,?)");
+        $req=$cnx->prepare("insert into formateur (nom_formateur,prenom_formateur,sexe_formateur,pseudo_formateur,pass_formateur,date_naissance_formateur,email_formateur,ville_formateur,specialite_formateur) values(?,?,?,?,?,?,?,?,?)");
         $req->bindParam(1,$this->nom_formateur);
 		$req->bindParam(2,$this->prenom_formateur);
 		$req->bindParam(3,$this->sexe_formateur);
@@ -74,13 +74,13 @@ class formateur extends functions
 		$req->bindParam(9,$this->specialite_formateur);
 		$req->bindParam(10,$this->id_formateur);
 		$req->execute();
-		parent::redirect("index.php?controller=apprenant&action=liste");
+		parent::redirect("index.php?controller=formateur&action=liste");
         }
 	
 
     public function etat($cnx,$datedb,$datefn){
 
-        $req=$cnx->query("select * from apprenant where date_echeance between '".$datedb."'and'".$datefn."'")->fetchAll(PDO::FETCH_OBJ);
+        $req=$cnx->query("select * from formateur where date_echeance between '".$datedb."'and'".$datefn."'")->fetchAll(PDO::FETCH_OBJ);
 		return $req;
         }
 

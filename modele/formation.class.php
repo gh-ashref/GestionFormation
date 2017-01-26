@@ -17,6 +17,7 @@ class formation extends functions
 	
     //Ajout voiture
     public function add($cnx){
+    	
         $req=$cnx->prepare("insert into formation (titre_formation,description_formation) values(?,?)");
         $req->bindParam(1,$this->titre_formation);
 		$req->bindParam(2,$this->description_formation);
@@ -24,7 +25,7 @@ class formation extends functions
 	
 		
 		$req->execute();
-		parent::redirect("index.php?controller=formateur&action=liste");
+		parent::redirect("index.php?controller=formation&action=liste");
         }
 		
 	//liste voiture
