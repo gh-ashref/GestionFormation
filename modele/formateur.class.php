@@ -32,7 +32,7 @@ class formateur extends functions
 		$req->bindParam(2,$this->prenom_formateur);
 		$req->bindParam(3,$this->sexe_formateur);
 		$req->bindParam(4,$this->pseudo_formateur);
-		$req->bindParam(5,$this->pass_formateur);
+		$req->bindParam(5,md5($this->pass_formateur));
 		$req->bindParam(6,$this->date_naissance_formateur);
 		$req->bindParam(7,$this->email_formateur);
 		$req->bindParam(8,$this->ville_formateur);

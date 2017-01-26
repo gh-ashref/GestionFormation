@@ -12,8 +12,8 @@
     <div class="right">
       <div class="btn-group" role="group" aria-label="...">
         <a href="index.html" class="btn btn-light">Accueil</a>
-        <a href="#" class="btn btn-light"><i class="fa fa-file-pdf-o"></i></a>
-        <a href="#" class="btn btn-light"><i class="fa fa-file-excel-o"></i></a>
+         <a href="index_pdf.php?controller=formateur&action=etat"" class="btn btn-light"><i class="fa fa-file-pdf-o"></i></a>
+        <a href="index_excel.php?controller=formateur&action=excel" class="btn btn-light"><i class="fa fa-file-excel-o"></i></a>
       </div>
     </div>
     <!-- End Page Header Right Div -->

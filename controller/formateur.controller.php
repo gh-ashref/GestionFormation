@@ -57,7 +57,7 @@ break;
 
 case "etat": 
 $res=$ch->liste($cnx);
-include "view/formateur/etat.view.php";
+include "view/formateur/pdf.view.php";
 break;
 
 
@@ -83,7 +83,7 @@ break;
 //export excel
 case "excel": $res=$ch->liste($cnx);
 
-include "view/cheque/excel.view.php";
+include "view/formateur/excel.view.php";
 break;
 
 case "excel1": $res=$ch->etat($cnx,$datedb,$datefin);

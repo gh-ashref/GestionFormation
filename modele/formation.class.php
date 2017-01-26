@@ -54,7 +54,7 @@ class formation extends functions
 		$req->bindParam(2,$this->description_formation);
 		
 		$req->execute();
-		parent::redirect("index.php?controller=apprenant&action=liste");
+		parent::redirect("index.php?controller=formation&action=liste");
         }
 	
 
@@ -70,7 +70,7 @@ class formation extends functions
 	$v=$req->fetch(PDO::FETCH_ASSOC);
 	
         $req=$cnx->exec("delete from formation where id_formation='".$this->id_formation."'");
-		parent::redirect("index.php?controller=apprenant&action=liste");
+		parent::redirect("index.php?controller=formation&action=liste");
 		}
     } //fin class
 

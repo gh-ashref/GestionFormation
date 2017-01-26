@@ -12,7 +12,7 @@
     <div class="right">
       <div class="btn-group" role="group" aria-label="...">
         <a href="index.html" class="btn btn-light">Accueil</a>
-        <a href="index_pdf.php?controller=apprenant&action=etat"" class="btn btn-light"><i class="fa fa-file-pdf-o"></i></a>
+        <a href="#" class="btn btn-light"><i class="fa fa-file-pdf-o"></i></a>
         <a href="index_excel.php?controller=apprenant&action=excel" class="btn btn-light"><i class="fa fa-file-excel-o"></i></a>
       </div>
     </div>
@@ -45,11 +45,9 @@
             <thead>
               <tr>
               
-                <td>Nom et Prenom</td>
-                <td>Mail</td>
-                <td>Date Naissance</td>
-                <td>Ville</td>
-                <td>Niveau</td>
+                <td>titre formation</td>
+                <td>description</td>
+               
 				 <td>Menu</td>
               </tr>
             </thead>
@@ -57,17 +55,15 @@
 			<?php 
 
 foreach($res as $tab){
-	if ($tab->sexe_apprenant=="Femme")
-		echo"<tr class='danger'>";
-	else echo"<tr class='succes'>";
+	
+		
+	 echo"<tr class='succes'>";
 	echo "
 
-                <td>".$tab->nom_apprenant." ".$tab->prenom_apprenant."</td>
-                <td >".$tab->email_apprenant."</td>
-                <td>".$tab->date_naissance_apprenant."</td>
-                <td>".$tab->ville_apprenant."</td>
-                <td>".$tab->niveau_apprenant."</td>
-                <td><a href=\"index.php?controller=apprenant&action=delete&id_apprenant=".$tab->id_apprenant."\" onclick=\"if(confirm('etes vous sure de supprimer?')) return true; else return false; \"><i class='fa fa-remove' ></i></a>  <a href=index.php?controller=apprenant&action=edit1&id_apprenant=".$tab->id_apprenant."><i class='fa fa-edit' ></i></a></td>
+                <td>".$tab->titre_formation."</td>
+                <td >".$tab->description_formation."</td>
+                
+                <td><a href=\"index.php?controller=formation&action=delete&id_formation=".$tab->id_formation."\" onclick=\"if(confirm('etes vous sure de supprimer?')) return true; else return false; \"><i class='fa fa-remove' ></i></a>  <a href=index.php?controller=formation&action=edit1&id_formation=".$tab->id_formation."><i class='fa fa-edit' ></i></a></td>
               </tr>
 ";}
 			 ?>

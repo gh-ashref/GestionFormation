@@ -10,7 +10,7 @@ class groupe extends functions
 	private $id_formateur;
 
 	    
-    public function __construct($id_groupe,$frais_formation,$nombre_heure_formation,$date_debut_formation,$date_fin_formation,$id_formation,$id_formateur,){
+    public function __construct($id_groupe,$frais_formation,$nombre_heure_formation,$date_debut_formation,$date_fin_formation,$id_formation,$id_formateur){
         $this->id_groupe=$id_groupe;
         $this->frais_formation=$frais_formation;
         $this->nombre_heure_formation=$nombre_heure_formation;

@@ -34,7 +34,7 @@ class apprenant extends functions
 		$req->bindParam(2,$this->prenom_apprenant);
 		$req->bindParam(3,$this->sexe_apprenant);
 		$req->bindParam(4,$this->pseudo_apprenant);
-		$req->bindParam(5,$this->pass_apprenant);
+		$req->bindParam(5,md5($this->pass_apprenant));
 		$req->bindParam(6,$this->date_naissance_apprenant);
 		$req->bindParam(7,$this->email_apprenant);
 		$req->bindParam(8,$this->ville_apprenant);
