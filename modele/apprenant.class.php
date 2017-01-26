@@ -11,7 +11,9 @@ class apprenant extends functions
 	private $email_apprenant;
 	private $ville_apprenant;
 	private $niveau_apprenant;
-	    
+
+
+	 
     public function __construct($id_apprenant,$nom_apprenant,$prenom_apprenant,$sexe_apprenant,$pseudo_apprenant,$pass_apprenant,$date_naissance_apprenant,$email_apprenant,$ville_apprenant,$niveau_apprenant){
         $this->id_apprenant=$id_apprenant;
         $this->nom_apprenant=$nom_apprenant;

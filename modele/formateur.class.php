@@ -11,7 +11,7 @@ class formateur extends functions
 	private $email_formateur;
 	private $ville_formateur;
 	private $specialite_formateur;
-	    
+	  
     public function __construct($id_formateur,$nom_formateur,$prenom_formateur,$sexe_formateur,$pseudo_formateur,$pass_formateur,$date_naissance_formateur,$email_formateur,$ville_formateur,$specialite_formateur){
         $this->id_formateur=$id_formateur;
         $this->nom_formateur=$nom_formateur;
