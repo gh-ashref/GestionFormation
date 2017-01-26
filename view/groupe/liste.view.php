@@ -45,6 +45,7 @@
             <thead>
               <tr>
               
+                <td>nom Groupe</td>
                 <td>frais_formation formation</td>
                 <td>nombre_heure_formation</td>
                
@@ -63,6 +64,8 @@ foreach($res as $tab){
 	 echo"<tr class='succes'>";
 	echo "
 
+	
+                <td>".$tab->nom_groupe."</td>
                 <td>".$tab->frais_formation."</td>
                 <td >".$tab->nombre_heure_formation."</td>
                 <td >".$tab->date_debut_formation."</td>
