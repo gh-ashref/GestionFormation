@@ -20,13 +20,15 @@ include "modele/formateur.class.php";
 	   $date_fin_formation="";
 	    $id_formation="";
 	     $id_formateur="";
-	      
+	     $nom_groupe=""; 
 	 $titre_formation="";
 	 $description_formation="";
 
 //recup des param externe
 if(isset($_REQUEST['id_groupe']))
 $id_groupe=$_REQUEST['id_groupe'];
+if(isset($_REQUEST['nom_groupe']))
+$nom_groupe=$_REQUEST['nom_groupe'];
 
 if(isset($_REQUEST['frais_formation']))
 $frais_formation=$_REQUEST['frais_formation'];
@@ -54,7 +56,7 @@ $id_formateur=$_REQUEST['id_formateur'];
 $formateur=new formateur($id_formateur,$nom_formateur,$prenom_formateur,$sexe_formateur,$pseudo_formateur,$pass_formateur,$date_naissance_formateur,$email_formateur,$ville_formateur,$specialite_formateur);
 
 
-$ch=new groupe($id_groupe,$frais_formation,$nombre_heure_formation, $date_debut_formation,$date_fin_formation,$id_formation, $id_formateur);
+$ch=new groupe($id_groupe,$frais_formation,$nombre_heure_formation, $date_debut_formation,$date_fin_formation,$id_formation, $id_formateur,$nom_groupe);
 
 switch($action){
 

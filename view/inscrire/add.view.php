@@ -71,7 +71,7 @@
                     <select class="selectpicker"  name="id_groupe">
                       <?php
   foreach($res1 as $resultat){ ?>
-    <option value="<?php echo $resultat->id_groupe;?>"><?php echo $resultat->id_groupe;?></option>
+    <option value="<?php echo $resultat->id_groupe;?>"><?php echo $resultat->nom_groupe;?></option>
     <?php } ?>
               
                         
