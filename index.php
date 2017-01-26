@@ -1,12 +1,25 @@
-<!DOCTYPE html>
+<?php session_start();
+
+include 'includes/connexion.php';
+include "modele/fonctions.class.php";
+$fn=new functions();
+$controller="apprenant";
+$action="liste";
+
+if(isset($_REQUEST['controller']))
+$controller=$_REQUEST['controller'];
+
+if(isset($_REQUEST['action']))
+$action=$_REQUEST['action'];
+
+?>
 <html lang="en">
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kode is a Premium Bootstrap Admin Template, It's responsive, clean coded and mobile friendly">
-  <meta name="keywords" content="bootstrap, admin, dashboard, flat admin template, responsive," />
-  <title>Kode - Premium Bootstrap Admin Template</title>
+ 
+  <title>Gestion Formation</title>
 
   <!-- ========== Css Files ========== -->
   <link href="css/root.css" rel="stylesheet">
@@ -40,12 +53,12 @@
     <ul class="top-right">
 
     <li class="dropdown link">
-      <a href="#" data-toggle="dropdown" class="dropdown-toggle hdbutton">Create New <span class="caret"></span></a>
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle hdbutton">Créer un nouveau <span class="caret"></span></a>
         <ul class="dropdown-menu dropdown-menu-list">
-          <li><a href="#"><i class="fa falist fa-paper-plane-o"></i>Product or Item</a></li>
-          <li><a href="#"><i class="fa falist fa-font"></i>Blog Post</a></li>
-          <li><a href="#"><i class="fa falist fa-file-image-o"></i>Image Gallery</a></li>
-          <li><a href="#"><i class="fa falist fa-file-video-o"></i>Video Gallery</a></li>
+          <li><a href="#"><i class="fa falist fa-user"></i>Apprenant</a></li>
+          <li><a href="#"><i class="fa falist fa-book"></i>Formation</a></li>
+          <li><a href="#"><i class="fa falist fa-graduation-cap"></i>Formateur</a></li>
+          <li><a href="#"><i class="fa falist fa-group"></i>Groupe</a></li>
         </ul>
     </li>
 
@@ -134,64 +147,7 @@
 <!-- //////////////////////////////////////////////////////////////////////////// --> 
 
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
-<!-- START CONTENT -->
-<div class="content">
-
-  <!-- Start Page Header -->
-  <div class="page-header">
-    <h1 class="title">Dashboard</h1>
-      <ol class="breadcrumb">
-        <li class="active">This is a quick overview of some features</li>
-    </ol>
-
-    <!-- Start Page Header Right Div -->
-    <div class="right">
-      <div class="btn-group" role="group" aria-label="...">
-        <a href="index.html" class="btn btn-light">Dashboard</a>
-        <a href="#" class="btn btn-light"><i class="fa fa-refresh"></i></a>
-        <a href="#" class="btn btn-light"><i class="fa fa-search"></i></a>
-        <a href="#" class="btn btn-light" id="topstats"><i class="fa fa-line-chart"></i></a>
-      </div>
-    </div>
-    <!-- End Page Header Right Div -->
-
-  </div>
-  <!-- End Page Header -->
-
-
- <!-- //////////////////////////////////////////////////////////////////////////// --> 
-<!-- START CONTAINER -->
-<div class="container-widget">
-
- 
-
-
- 
-
-
-  <!-- Start Second Row -->
-  <div class="row">
-
-
-
-   
-
-
-  </div>
-  <!-- End Second Row -->
-
-
-
-
-
-</div>
-<!-- END CONTAINER -->
- <!-- //////////////////////////////////////////////////////////////////////////// --> 
-
-
-
-</div>
-<!-- End Content -->
+<!-- START CONTENT --><?php include "controller/".$controller.".controller.php"; ?><!-- End Content -->
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 
 
