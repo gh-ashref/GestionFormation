@@ -10,7 +10,7 @@ class groupe extends functions
 	private $id_formateur;
 
 	    
-    public function __construct($id_groupe,$frais_formation,$nombre_heure_formation,$date_debut_formation,$date_fin_formation,$id_formation,$id_formateur,){
+    public function __construct($id_groupe,$frais_formation,$nombre_heure_formation,$date_debut_formation,$date_fin_formation,$id_formation,$id_formateur){
         $this->id_groupe=$id_groupe;
         $this->frais_formation=$frais_formation;
         $this->nombre_heure_formation=$nombre_heure_formation;
@@ -24,20 +24,20 @@ class groupe extends functions
 	
     //Ajout voiture
     public function add($cnx){
-    	echo $frais_formation;
+    	
 
-        $req=$cnx->prepare("insert into groupe (frais_formation,nombre_heure_formation,date_debut_formation,date_fin_formation,id_formation,id_formateur) values(,?,?,?,?,?,?)");
+        $req=$cnx->prepare("insert into groupe (frais_formation,nombre_heure_formation,date_debut_formation,date_fin_formation,id_formation,id_formateur) values(?,?,?,?,?,?)");
         $req->bindParam(1,$this->frais_formation);
 		$req->bindParam(2,$this->nombre_heure_formation);
 		$req->bindParam(3,$this->date_debut_formation);
 		$req->bindParam(4,$this->date_fin_formation);
 		$req->bindParam(5,$this->id_formation);
 		$req->bindParam(6,$this->id_formateur);
+	    $req->execute();
 		
+
 		
-		$req->execute();
-		
-		//parent::redirect("index.php?controller=groupe&action=liste");
+		parent::redirect("index.php?controller=groupe&action=liste");
         }
 		
 	//liste voiture

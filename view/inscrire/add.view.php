@@ -42,7 +42,7 @@
       <div class="panel panel-default">
 
         <div class="panel-title">
-          Ajout Formation 
+          Ajout insrire 
           <ul class="panel-tools">
             <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
             <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
@@ -51,14 +51,14 @@
         </div>
 
             <div class="panel-body">
-			<form method="post" class="form-horizontal" action="index.php?controller=groupe&action=add" enctype="multipart/form-data">
+			<form method="post" class="form-horizontal" action="index.php?controller=inscrire&action=add" enctype="multipart/form-data">
 <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">formation</label>
+                  <label class="col-sm-2 control-label form-label">apprenant</label>
                   <div class="col-sm-10">
-                    <select class="selectpicker"  name="id_formation">
+                    <select class="selectpicker"  name="id_apprenant">
                       <?php
   foreach($req as $resultat){ ?>
-    <option value="<?php echo $resultat->id_formation;?>"><?php echo $resultat->titre_formation;?></option>
+    <option value="<?php echo $resultat->id_apprenant;?>"><?php echo $resultat->nom_apprenant;?></option>
     <?php } ?>
               
                         
@@ -66,12 +66,12 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Formateur</label>
+                  <label class="col-sm-2 control-label form-label">Groupe</label>
                   <div class="col-sm-10">
-                    <select class="selectpicker"  name="id_formateur">
+                    <select class="selectpicker"  name="id_groupe">
                       <?php
   foreach($res1 as $resultat){ ?>
-    <option value="<?php echo $resultat->id_formateur;?>"><?php echo $resultat->nom_formateur;?></option>
+    <option value="<?php echo $resultat->id_groupe;?>"><?php echo $resultat->id_groupe;?></option>
     <?php } ?>
               
                         
@@ -80,33 +80,19 @@
                 </div>
 
                  <div class="form-group">
-                  <label for="input2" class="col-sm-2 control-label form-label">Frais Formation</label>
+                  <label for="input2" class="col-sm-2 control-label form-label">prix</label>
                   <div class="col-sm-10">
-                    <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="frais_formation">
+                    <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="prix">
                   </div>
                 </div>
 				
 				 <div class="form-group">
-                  <label for="input2" class="col-sm-2 control-label form-label">Nombre d'heure</label>
+                  <label for="input2" class="col-sm-2 control-label form-label">remise</label>
                   <div class="col-sm-10">
-                    <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="nombre_heure_formation">
+                    <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="remise">
                   </div>
                 </div>
-				
-         <div class="form-group">
-                  <label for="input2" class="col-sm-2 control-label form-label">Date debut</label>
-                  <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-radius" id="input2" name="date_debut_formation">
-                  </div>
-                </div>
-
-         <div class="form-group">
-                  <label for="input2" class="col-sm-2 control-label form-label">Date fin </label>
-                  <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-radius" id="input2" name="date_fin_formation">
-                  </div>
-                </div>      
-                <center>
+				        <center>
             <button type="submit" class="btn btn-default btn-lg">Valider</button>
 			</center>
 
