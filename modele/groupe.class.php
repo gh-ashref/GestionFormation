@@ -55,7 +55,7 @@ class groupe extends functions
 		
 	//detail voiture
     public function detail($cnx){
-        $req=$cnx->query("select distinct * from groupe g,formateur f,formation fr where g.id_formation=fr.id_formation and g.id_formateur=f.id_formateur and id_groupe=".$this->id_groupe)->fetch(PDO::FETCH_OBJ);
+        $req=$cnx->query("select  fr.id_formation as 'id_formation',frais_formation,nombre_heure_formation,date_debut_formation,date_fin_formation,nom_groupe,fr.titre_formation as 'titre_formation' from groupe g,formateur f,formation fr where g.id_formation=fr.id_formation and g.id_formateur=f.id_formateur and id_groupe=".$this->id_groupe)->fetch(PDO::FETCH_OBJ);
 		return $req;
         }
 		

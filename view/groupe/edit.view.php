@@ -57,7 +57,7 @@
                   <div class="col-sm-10">
                     <select class="selectpicker"  name="id_formation">
                       <?php
-  foreach($res as $resultat){ ?>
+  foreach($req as $resultat){ ?>
     <option value="<?php echo $resultat->id_formation;?>"><?php echo $resultat->titre_formation;?></option>
     <?php } ?>
               
@@ -82,28 +82,28 @@
                  <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Frais Formation</label>
                   <div class="col-sm-10">
-                    <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="frais_formation">
+                    <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="frais_formation" value="<?php echo $res->frais_formation;?>">
                   </div>
                 </div>
 				
 				 <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Nombre d'heure</label>
                   <div class="col-sm-10">
-                    <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="nombre_heure_formation">
+                    <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="nombre_heure_formation" value="<?php echo $res->nombre_heure_formation;?>">
                   </div>
                 </div>
 				
          <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Date debut</label>
                   <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-radius" id="input2" name="date_debut_formation">
+                    <input type="date" class="form-control form-control-radius" id="input2" name="date_debut_formation" value="<?php echo $res->date_debut_formation;?>">
                   </div>
                 </div>
 
          <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Date fin </label>
                   <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-radius" id="input2" name="date_fin_formation">
+                    <input type="date" class="form-control form-control-radius" id="input2" name="date_fin_formation" value="<?php echo $res->date_fin_formation;?>">
                   </div>
                 </div>      
                 <center>

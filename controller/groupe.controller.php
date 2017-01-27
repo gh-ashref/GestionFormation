@@ -74,7 +74,7 @@ break;
 case "add": $ch->add($cnx);
 break;
 //etape1 : edit
-case "edit1": $res=$ch->detail($cnx);
+case "edit1": $res=$ch->detail($cnx);$req=$formation->liste($cnx);$res1=$formateur->liste($cnx);$res=$ch->detail($cnx);
 
 include "view/groupe/edit.view.php";
 break;
