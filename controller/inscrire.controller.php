@@ -26,6 +26,14 @@ include "modele/inscrire.class.php";
 	 $remise="";
      $id_groupe="";
       $id_apprenant="";
+$nom_groupe="";
+	  
+	  
+	  if(isset($_REQUEST['dated']))
+$dated=$_REQUEST['dated'];
+  if(isset($_REQUEST['datef']))
+$datef=$_REQUEST['datef'];
+
 
 //recup des param externe
 if(isset($_REQUEST['id_groupe']))
@@ -49,7 +57,7 @@ $id_apprenant=$_REQUEST['id_apprenant'];
 	$apprenant=new apprenant($id_apprenant,$nom_apprenant,$prenom_apprenant,$sexe_apprenant,$pseudo_apprenant,$pass_apprenant,$date_naissance_apprenant,$email_apprenant,$ville_apprenant,$niveau_apprenant);
 
 
-$groupe=new groupe($id_groupe,$frais_formation,$nombre_heure_formation, $date_debut_formation,$date_fin_formation,$id_formation, $id_formateur);
+$groupe=new groupe($id_groupe,$frais_formation,$nombre_heure_formation, $date_debut_formation,$date_fin_formation,$id_formation, $id_formateur,$nom_groupe);
 
 $ch=new inscrire($id_incrit,$prix,$remise,$id_apprenant,$id_groupe);
 
@@ -82,7 +90,12 @@ break;
 
 case "liste": 
 $res=$ch->liste($cnx);
-include "view/formation/liste.view.php";
+include "view/inscrire/liste.view.php";
+break;
+
+case "listefiltre": 
+$res=$ch->listefiltre($cnx,$dated,$datef);
+include "view/inscrire/liste.view.php";
 break;
 //export excel
 case "excel": $res=$ch->liste($cnx);

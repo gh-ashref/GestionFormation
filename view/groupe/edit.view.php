@@ -2,18 +2,16 @@
 <div class="content">
 
   <!-- Start Page Header -->
-  <div class="page-header">
-    <h1 class="title">Dashboard</h1>
+ <div class="page-header">
+    <h1 class="title">Editer des Groupe</h1>
       <ol class="breadcrumb">
-        <li class="active">This is a quick overview of some features</li>
+        <li class="active">Cette Outils Permet de Gerer les Formations</li>
     </ol>
-
     <!-- Start Page Header Right Div -->
     <div class="right">
       <div class="btn-group" role="group" aria-label="...">
-        <a href="index.html" class="btn btn-light">Accueil</a>
-        <a href="#" class="btn btn-light"><i class="fa fa-file-pdf-o"></i></a>
-        <a href="#" class="btn btn-light"><i class="fa fa-file-excel-o"></i></a>
+        <a href="index.php" class="btn btn-light">Accueil</a>
+        
       </div>
     </div>
     <!-- End Page Header Right Div -->
@@ -78,7 +76,13 @@
                       </select>                  
                   </div>
                 </div>
-
+<div class="form-group">
+                  <label for="input2" class="col-sm-2 control-label form-label">nom groupe</label>
+                  <div class="col-sm-10">
+                    <input type="text"  class="form-control form-control-radius" id="input2" name="nom_groupe" value="<?php echo $res->nom_groupe;?>">
+                  </div>
+                </div>
+				
                  <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Frais Formation</label>
                   <div class="col-sm-10">
