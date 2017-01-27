@@ -39,7 +39,7 @@
    <div class="invoice row">
     <div class="invoicename">Reglement</div>
     <div class="logo">
-      <img src="img/example-logo.png" alt="logo"><br>
+      <img src="img/logo.png" alt="logo"><br>
       <b>Bienvenu chez notre centre du formation</b><br>
       Centre du formation Sfax<br>
       Route mahdia sfax 3000
