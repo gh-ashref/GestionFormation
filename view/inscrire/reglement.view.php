@@ -58,8 +58,11 @@
 
     <div class="line row">
       <div class="col-md-6 col-xs-6 padding-0 text-left">
+	 
         <h4>Nom et Prenom</h4>
-        <h2>Jonathan Doe</h2>
+		
+        <h2><?php echo $res[0]->nom_apprenant;?> <?php echo $res[0]->prenom_apprenant;?></h2>
+	
       </div>
       <div class="col-md-6 col-xs-6 padding-0 text-right">
         <h4>PROJECT</h4>
@@ -70,36 +73,27 @@
     <table class="table">
       <thead class="title">
         <tr>
-          <td>TASK DESCRIPTION</td>
-          <td>HOURS</td>
-          <td>RATE PER HOUR</td>
+          <td>Formation</td>
+          <td>Nombre d'heure</td>
+          <td>Prix</td>
           <td class="text-right">TOTAL</td>
         </tr>
       </thead>
       <tbody>
+	<?php $tot=0; foreach($res as $tab){?>
         <tr>
-          <td>Ipad Application Design <p>Designed an app learning colors<br>for children</p></td>
-          <td>20</td>
-          <td>$ 90,00</td>
-          <td class="text-right">$ 1.800,00</td>
+          <td><?php echo $tab->titre_formation;?> <p><?php echo $tab->description_formation;?></p></td>
+          <td><?php echo $tab->nombre_heure_formation;?></td>
+          <td><?php echo $tab->prix;?></td>
+          <td class="text-right"> <?php $a=(int)$tab->prix-(($tab->prix*$tab->remise)/100); echo $a; $tot=$a+$tot?></td>
         </tr>
-        <tr>
-          <td>Logo Design <p>Designed a logo for happy company</td>
-          <td>10</td>
-          <td>$ 50,00</td>
-          <td class="text-right">$ 500,00</td>
-        </tr>
-        <tr>
-          <td>iOS Application <p>Designed an iOs app for iPhone</td>
-          <td>40</td>
-          <td>$ 50,00</td>
-          <td class="text-right">$ 2.000,00</td>
-        </tr>
+	<?php }?>
+       
         <tr>
           <td></td>
           <td></td>
           <td class="text-right"></td>
-          <td class="text-right">TOTAL<h4 class="total">$ 4.300,00</h4></td>
+          <td class="text-right">TOTAL<h4 class="total"><?php echo $tot;?></h4></td>
         </tr>
       </tbody>
     </table>
