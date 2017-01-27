@@ -97,6 +97,10 @@ case "listefiltre":
 $res=$ch->listefiltre($cnx,$dated,$datef);
 include "view/inscrire/liste.view.php";
 break;
+case "listeetud": 
+$res=$ch->listeetud($cnx,$id_groupe);
+include "view/inscrire/listeetud.view.php";
+break;
 //export excel
 case "excel": $res=$ch->liste($cnx);
 
