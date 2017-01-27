@@ -3,7 +3,7 @@
 
   <!-- Start Page Header -->
  <div class="page-header">
-    <h1 class="title">Ajouter des Groupe</h1>
+    <h1 class="title">Reglement</h1>
       <ol class="breadcrumb">
         <li class="active">Cette Outils Permet de Gerer les Formations</li>
     </ol>
