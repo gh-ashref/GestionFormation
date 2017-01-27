@@ -1,0 +1,13 @@
+RewriteEngine on
+Options +FollowSymlinks
+RewriteCond %{HTTP_REFERER} !^http://localhost|http://127.0.0.1|https://localhost|https://127.0.0.1
+RewriteRule ^.*\.png|jpg|gif|css|js$ - [F]
+
+RewriteRule ^index_([a-z1-9]+)_([a-z1-9]+)\.html$ index.php?controller=$1&action=$2 [L]
+RewriteRule ^index_([a-z1-9]+)_([a-z1-9]+)_([a-z1-9]+)\.html$ index.php?controller=$1&action=$2&id_apprenant=$3 [L]
+RewriteRule ^(.*)\.html$ index.php [L]
+
+AuthName "Authentification!"
+AuthType Basic
+AuthUserFile "C:/xampp/htdocs/GestionFormation/.htpasswd"
+Require valid-user

@@ -11,9 +11,11 @@
     <!-- Start Page Header Right Div -->
     <div class="right">
       <div class="btn-group" role="group" aria-label="...">
-        <a href="index.html" class="btn btn-light">Accueil</a>
-        <a href="#" class="btn btn-light"><i class="fa fa-file-pdf-o"></i></a>
-        <a href="index_excel.php?controller=apprenant&action=excel" class="btn btn-light"><i class="fa fa-file-excel-o"></i></a>
+	  <?php echo "
+        <a href='index.html' class='btn btn-light'>Accueil</a>
+        <a href='index_pdf.php?controller=inscrire&action=etat&dated=".$dated."&datef=".$datef."' class='btn btn-light'><i class='fa fa-file-pdf-o'></i></a>
+        <a href='index_excel.php?controller=inscrire&action=excel&dated=".$dated."&datef=".$datef."' class='btn btn-light'><i class='fa fa-file-excel-o'></i></a>
+		"?>
       </div>
     </div>
     <!-- End Page Header Right Div -->

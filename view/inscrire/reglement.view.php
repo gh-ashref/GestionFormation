@@ -65,8 +65,8 @@
 	
       </div>
       <div class="col-md-6 col-xs-6 padding-0 text-right">
-        <h4>PROJECT</h4>
-        <h2>Personal</h2>
+        <h4>Ville</h4>
+        <h2><?php echo $res[0]->ville_apprenant;?></h2>
       </div>
     </div>
 

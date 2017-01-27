@@ -6,7 +6,7 @@ include "modele/fonctions.class.php";
 
 $fn=new functions();
 $controller="apprenant";
-$action="add1";
+$action="liste";
 
 if(isset($_REQUEST['controller']))
 $controller=$_REQUEST['controller'];
@@ -57,10 +57,10 @@ $action=$_REQUEST['action'];
     <li class="dropdown link">
       <a href="#" data-toggle="dropdown" class="dropdown-toggle hdbutton">Créer un nouveau <span class="caret"></span></a>
         <ul class="dropdown-menu dropdown-menu-list">
-          <li><a href="index.php?controller=apprenant&action=add1"><i class="fa falist fa-user"></i>Apprenant</a></li>
-          <li><a href="index.php?controller=formation&action=add1"><i class="fa falist fa-book"></i>Formation</a></li>
-          <li><a href="index.php?controller=formateur&action=add1"><i class="fa falist fa-graduation-cap"></i>Formateur</a></li>
-          <li><a href="index.php?controller=groupe&action=add1"><i class="fa falist fa-group"></i>Groupe</a></li>
+          <li><a href="index_apprenant_add1.html"><i class="fa falist fa-user"></i>Apprenant</a></li>
+          <li><a href="index_formation_add1.html"><i class="fa falist fa-book"></i>Formation</a></li>
+          <li><a href="index_formateur_add1.html"><i class="fa falist fa-graduation-cap"></i>Formateur</a></li>
+          <li><a href="index_groupe_add1.html"><i class="fa falist fa-group"></i>Groupe</a></li>
         </ul>
     </li>
 
@@ -91,36 +91,36 @@ $action=$_REQUEST['action'];
  
    <li><a href="#"><span class="icon color9"><i class="fa fa-male"></i></span>Apprenant<span class="caret"></span></a>
     <ul>
-      <li><a href="index.php?controller=apprenant&action=add1">Ajout Apprenant</a></li>
-      <li><a href="index.php?controller=apprenant&action=liste">Gestion Apprenant</a></li>
+      <li><a href="index_apprenant_add1.html">Ajout Apprenant</a></li>
+      <li><a href="index_apprenant_liste.html">Gestion Apprenant</a></li>
     </ul>
   </li>
   
    <li><a href="#"><span class="icon color9"><i class="fa fa-user-md"></i></span>Formateur<span class="caret"></span></a>
     <ul>
-      <li><a href="index.php?controller=formateur&action=add1">Ajout Formateur</a></li>
-      <li><a href="index.php?controller=formateur&action=liste">Gestion Formateur</a></li>
+      <li><a href="index_formateur_add1.html">Ajout Formateur</a></li>
+      <li><a href="index_formateur_liste.html">Gestion Formateur</a></li>
     </ul>
   </li>
   
    <li><a href="#"><span class="icon color9"><i class="fa fa-book"></i></span>Formation<span class="caret"></span></a>
     <ul>
-      <li><a href="index.php?controller=formation&action=add1">Ajout Formation</a></li>
-      <li><a href="index.php?controller=formation&action=liste">Gestion Formation</a></li>
+      <li><a href="index_formation_add1.html">Ajout Formation</a></li>
+      <li><a href="index_formation_liste.html">Gestion Formation</a></li>
     </ul>
   </li>
   
    <li><a href="#"><span class="icon color9"><i class="fa fa-group"></i></span>Groupe<span class="caret"></span></a>
     <ul>
-      <li><a href="index.php?controller=groupe&action=add1">Ajout Groupe</a></li>
-      <li><a href="index.php?controller=groupe&action=liste">Gestion Groupe</a></li>
+      <li><a href="index_groupe_add1.html">Ajout Groupe</a></li>
+      <li><a href="index_groupe_liste.html">Gestion Groupe</a></li>
     </ul>
   </li>
   
    <li><a href="#"><span class="icon color9"><i class="fa fa-edit"></i></span>Incription<span class="caret"></span></a>
     <ul>
-      <li><a href="index.php?controller=inscrire&action=add1">Affecter Apprenant</a></li>
-      <li><a href="index.php?controller=inscrire&action=rech">Liste inscription</a></li>
+      <li><a href="index_inscrire_add1.html">Affecter Apprenant</a></li>
+      <li><a href="index_inscrire_rech.html">Liste inscription</a></li>
     </ul>
   </li>
   

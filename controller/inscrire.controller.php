@@ -67,10 +67,7 @@ case "add1": $req=$apprenant->liste($cnx);$res1=$groupe->liste($cnx);
 include "view/inscrire/add.view.php";
 break;
 
-case "etat": 
-$res=$ch->liste($cnx);
-include "view/formation/etat.view.php";
-break;
+
 
 
 //etape2 : insertion
@@ -107,24 +104,28 @@ $res=$ch->listeetud($cnx,$id_groupe);
 include "view/inscrire/listeetud.view.php";
 break;
 //export excel
-case "excel": $res=$ch->liste($cnx);
 
-include "view/cheque/excel.view.php";
-break;
 
-case "excel1": $res=$ch->etat($cnx,$datedb,$datefin);
+case "excel": $res=$ch->listefiltre($cnx,$dated,$datef);
 
-include "view/formation/excel.view.php";
+include "view/inscrire/excel.view.php";
 break;
 
 case "reglement": $res=$ch->reglement($cnx,$id_groupe);
-include "view/inscrire/reglement.view.php";
+try {
+	$aaa=$res[0]->nom_apprenant;
+    include "view/inscrire/reglement.view.php";
+} catch (Exception $e) {
+    include "view/inscrire/apprenant.view.php";
+}
+ 
+
 break;
 
 
-case "etat1": 
-$res=$ch->etat($cnx,$datedb,$datefin);
-include "view/formation/affetat.view.php";
+case "etat": 
+$res=$ch->listefiltre($cnx,$dated,$datef);
+include "view/inscrire/pdf.view.php";
 break;
 
 
