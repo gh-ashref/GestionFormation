@@ -41,6 +41,10 @@ class inscrire extends functions
         $req=$cnx->query("select * from inscrire i, groupe g,formateur f,formation fr where  i.id_groupe=g.id_groupe and fr.id_formation=g.id_formation and g.id_formateur=f.id_formateur and date_debut_formation between '".$dated."' and '".$datef."' ")->fetchAll(PDO::FETCH_OBJ);
 		return $req;
         }
+		public function listeetud($cnx,$id_groupe){
+        $req=$cnx->query("select * from apprenant a, inscrire i where  a.id_apprenant=i.id_apprenant and i.id_groupe='".$id_groupe."' ")->fetchAll(PDO::FETCH_OBJ);
+		return $req;
+        }
 		
 		
 	//detail voiture
@@ -48,6 +52,8 @@ class inscrire extends functions
         $req=$cnx->query("select * from inscrire where id_incrit=".$this->id_incrit)->fetch(PDO::FETCH_OBJ);
 		return $req;
         }
+
+
 		
 	//Modif voiture
 	public function edit($cnx){
