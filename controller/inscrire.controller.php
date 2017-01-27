@@ -117,6 +117,11 @@ case "excel1": $res=$ch->etat($cnx,$datedb,$datefin);
 include "view/formation/excel.view.php";
 break;
 
+case "reglement": $res=$ch->reglement($cnx,$id_groupe);
+include "view/inscrire/reglement.view.php";
+break;
+
+
 case "etat1": 
 $res=$ch->etat($cnx,$datedb,$datefin);
 include "view/formation/affetat.view.php";

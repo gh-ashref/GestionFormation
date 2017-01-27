@@ -37,6 +37,12 @@ class inscrire extends functions
         }
        
 	   
+	    public function reglement($cnx,$id_apprenant){
+        $req=$cnx->query("select * from inscrire i, groupe g,apprenant a,formation fr where  i.id_groupe=g.id_groupe and fr.id_formation=g.id_formation and i.id_apprenant=a.id_apprenant and i.id_apprenant=".$id_apprenant." ")->fetchAll(PDO::FETCH_OBJ);
+  		return $req;		  	
+        }
+		
+	   
 	    public function listefiltre($cnx,$dated,$datef){
         $req=$cnx->query("select * from inscrire i, groupe g,formateur f,formation fr where  i.id_groupe=g.id_groupe and fr.id_formation=g.id_formation and g.id_formateur=f.id_formateur and date_debut_formation between '".$dated."' and '".$datef."' ")->fetchAll(PDO::FETCH_OBJ);
   		return $req;		  	

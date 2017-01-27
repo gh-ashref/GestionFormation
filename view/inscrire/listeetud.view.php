@@ -67,7 +67,7 @@ foreach($res as $tab){
                 <td>".$tab->date_naissance_apprenant."</td>
                 <td>".$tab->ville_apprenant."</td>
                 <td>".$tab->niveau_apprenant."</td>
-                <td><a href=\"index.php?controller=apprenant&action=delete&id_apprenant=".$tab->id_apprenant."\" onclick=\"if(confirm('etes vous sure de supprimer?')) return true; else return false; \"><i class='fa fa-remove' ></i></a>  <a href=index.php?controller=apprenant&action=edit1&id_apprenant=".$tab->id_apprenant."><i class='fa fa-edit' ></i></a></td>
+                <td><a href=\"index.php?controller=apprenant&action=delete&id_apprenant=".$tab->id_apprenant."\" onclick=\"if(confirm('etes vous sure de supprimer?')) return true; else return false; \"><i class='fa fa-remove' ></i></a>  <a href=index.php?controller=apprenant&action=edit1&id_apprenant=".$tab->id_apprenant."><i class='fa fa-edit' ></i></a><a href=index.php?controller=inscrire&action=reglement&id_groupe=".$tab->id_apprenant."><i class='fa fa-money' ></i></a></td>
               </tr>
 ";}
 			 ?>
