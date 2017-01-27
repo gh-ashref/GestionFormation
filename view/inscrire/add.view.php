@@ -3,7 +3,7 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">Dashboard</h1>
+    <h1 class="title">Insertion des Inscriptions</h1>
       <ol class="breadcrumb">
         <li class="active">This is a quick overview of some features</li>
     </ol>
@@ -11,9 +11,8 @@
     <!-- Start Page Header Right Div -->
     <div class="right">
       <div class="btn-group" role="group" aria-label="...">
-        <a href="index.html" class="btn btn-light">Accueil</a>
-        <a href="#" class="btn btn-light"><i class="fa fa-file-pdf-o"></i></a>
-        <a href="#" class="btn btn-light"><i class="fa fa-file-excel-o"></i></a>
+        <a href="index.php" class="btn btn-light">Accueil</a>
+       
       </div>
     </div>
     <!-- End Page Header Right Div -->
@@ -42,7 +41,7 @@
       <div class="panel panel-default">
 
         <div class="panel-title">
-          Ajout insrire 
+          Ajout incrit 
           <ul class="panel-tools">
             <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
             <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>

@@ -3,7 +3,7 @@
 
   <!-- Start Page Header -->
    <div class="page-header">
-    <h1 class="title">Liste des Formations</h1>
+    <h1 class="title">Liste des Groupes</h1>
       <ol class="breadcrumb">
         <li class="active">Cette Outils Permet de Gerer les Formations</li>
     </ol>
@@ -45,9 +45,13 @@
             <thead>
               <tr>
               
-                <td>titre formation</td>
-                <td>description</td>
+                <td>nom Groupe</td>
+                <td>frais_formation formation</td>
+                <td>nombre_heure_formation</td>
                
+				 <td>date_debut_formation</td>
+				 <td>date_fin_formation</td>
+				 <td>nom formateur</td>
 				 <td>Menu</td>
               </tr>
             </thead>
@@ -60,10 +64,15 @@ foreach($res as $tab){
 	 echo"<tr class='succes'>";
 	echo "
 
-                <td>".$tab->titre_formation."</td>
-                <td >".$tab->description_formation."</td>
+	
+                <td>".$tab->nom_groupe."</td>
+                <td>".$tab->frais_formation."</td>
+                <td >".$tab->nombre_heure_formation."</td>
+                <td >".$tab->date_debut_formation."</td>
+                <td >".$tab->date_fin_formation."</td>
+                <td >".$tab->nom_formateur."</td>
                 
-                <td><a href=\"index.php?controller=formation&action=delete&id_formation=".$tab->id_formation."\" onclick=\"if(confirm('etes vous sure de supprimer?')) return true; else return false; \"><i class='fa fa-remove' ></i></a>  <a href=index.php?controller=formation&action=edit1&id_formation=".$tab->id_formation."><i class='fa fa-edit' ></i></a></td>
+                <td><a href=\"index.php?controller=groupe&action=delete&id_groupe=".$tab->id_groupe."\" onclick=\"if(confirm('etes vous sure de supprimer?')) return true; else return false; \"><i class='fa fa-remove' ></i></a>  <a href=index.php?controller=groupe&action=edit1&id_groupe=".$tab->id_groupe."><i class='fa fa-edit' ></i></a></td>
               </tr>
 ";}
 			 ?>

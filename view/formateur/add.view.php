@@ -12,8 +12,7 @@
     <div class="right">
       <div class="btn-group" role="group" aria-label="...">
         <a href="index.html" class="btn btn-light">Accueil</a>
-        <a href="#" class="btn btn-light"><i class="fa fa-file-pdf-o"></i></a>
-        <a href="#" class="btn btn-light"><i class="fa fa-file-excel-o"></i></a>
+        
       </div>
     </div>
     <!-- End Page Header Right Div -->

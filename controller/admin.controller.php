@@ -14,9 +14,10 @@ $pass=$_REQUEST['pass'];
 //instanciation de la classe voiture
 $adm=new admin($login,$pass);
 
+
 switch($action){
 //formulaire d'authentification
-case "login1": include "view/admin/login.view.php";
+case "login1": include "view/admin/login.php";
 break;
 //exec authent
 case "login": $adm->login($cnx);

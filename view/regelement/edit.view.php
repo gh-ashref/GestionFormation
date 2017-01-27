@@ -3,7 +3,7 @@
 
   <!-- Start Page Header -->
  <div class="page-header">
-    <h1 class="title">Ajouter des Groupe</h1>
+    <h1 class="title">Editer des Groupe</h1>
       <ol class="breadcrumb">
         <li class="active">Cette Outils Permet de Gerer les Formations</li>
     </ol>
@@ -40,7 +40,7 @@
       <div class="panel panel-default">
 
         <div class="panel-title">
-          Ajout Groupe
+          Ajout Formation 
           <ul class="panel-tools">
             <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
             <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
@@ -76,39 +76,38 @@
                       </select>                  
                   </div>
                 </div>
-
-
-                 <div class="form-group">
+<div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">nom groupe</label>
                   <div class="col-sm-10">
-                    <input type="text"  class="form-control form-control-radius" id="input2" name="nom_groupe">
+                    <input type="text"  class="form-control form-control-radius" id="input2" name="nom_groupe" value="<?php echo $res->nom_groupe;?>">
                   </div>
                 </div>
-        <div class="form-group">
+				
+                 <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Frais Formation</label>
                   <div class="col-sm-10">
-                    <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="frais_formation">
+                    <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="frais_formation" value="<?php echo $res->frais_formation;?>">
                   </div>
                 </div>
-        
+				
 				 <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Nombre d'heure</label>
                   <div class="col-sm-10">
-                    <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="nombre_heure_formation">
+                    <input type="number" step="0.1" class="form-control form-control-radius" id="input2" name="nombre_heure_formation" value="<?php echo $res->nombre_heure_formation;?>">
                   </div>
                 </div>
 				
          <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Date debut</label>
                   <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-radius" id="input2" name="date_debut_formation">
+                    <input type="date" class="form-control form-control-radius" id="input2" name="date_debut_formation" value="<?php echo $res->date_debut_formation;?>">
                   </div>
                 </div>
 
          <div class="form-group">
                   <label for="input2" class="col-sm-2 control-label form-label">Date fin </label>
                   <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-radius" id="input2" name="date_fin_formation">
+                    <input type="date" class="form-control form-control-radius" id="input2" name="date_fin_formation" value="<?php echo $res->date_fin_formation;?>">
                   </div>
                 </div>      
                 <center>
