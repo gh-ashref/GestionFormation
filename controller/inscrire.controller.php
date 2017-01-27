@@ -93,7 +93,12 @@ $res=$ch->liste($cnx);
 include "view/inscrire/liste.view.php";
 break;
 
-case "listefiltre": 
+case "rech":
+
+include "view/inscrire/rech.view.php";
+break;
+
+case "listefiltre":
 $res=$ch->listefiltre($cnx,$dated,$datef);
 include "view/inscrire/liste.view.php";
 break;
