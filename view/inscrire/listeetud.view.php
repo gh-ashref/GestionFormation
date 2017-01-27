@@ -49,7 +49,7 @@
                 <td>Mail</td>
                 <td>Date Naissance</td>
                 <td>Ville</td>
-                <td>Niveau</td>
+                <td width="10">Niveau</td>
 				 <td>Menu</td>
               </tr>
             </thead>

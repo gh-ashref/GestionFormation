@@ -120,7 +120,7 @@ $action=$_REQUEST['action'];
    <li><a href="#"><span class="icon color9"><i class="fa fa-edit"></i></span>Incription<span class="caret"></span></a>
     <ul>
       <li><a href="index.php?controller=inscrire&action=add1">Affecter Apprenant</a></li>
-      <li><a href="index.php?controller=groupe&action=rech">Liste inscription</a></li>
+      <li><a href="index.php?controller=inscrire&action=rech">Liste inscription</a></li>
     </ul>
   </li>
   

@@ -46,13 +46,13 @@
               <tr>
               
                 <td>nom Groupe</td>
-                <td>frais_formation formation</td>
-                <td>nombre_heure_formation</td>
+                <td>frais formation formation</td>
+                <td>nombre heure formation</td>
                
-				 <td>date_debut_formation</td>
-				 <td>date_fin_formation</td>
+				 <td>date debut formation</td>
+				 <td>date fin formation</td>
 				 <td>nom formateur</td>
-				 <td>Menu</td>
+				 <td width="100px">Menu</td>
               </tr>
             </thead>
             <tbody>
@@ -72,7 +72,7 @@ foreach($res as $tab){
                 <td >".$tab->date_fin_formation."</td>
                 <td >".$tab->nom_formateur."</td>
                 
-                <td><a href=\"index.php?controller=groupe&action=delete&id_groupe=".$tab->id_groupe."\" onclick=\"if(confirm('etes vous sure de supprimer?')) return true; else return false; \"><i class='fa fa-remove' ></i></a>  <a href=index.php?controller=groupe&action=edit1&id_groupe=".$tab->id_groupe."><i class='fa fa-edit' ></i></a></td>
+                <td><a href=\"index.php?controller=groupe&action=delete&id_groupe=".$tab->id_groupe."\" onclick=\"if(confirm('etes vous sure de supprimer?')) return true; else return false; \"><i class='fa fa-remove' ></i></a>  <a href=index.php?controller=groupe&action=edit1&id_groupe=".$tab->id_groupe."><i class='fa fa-edit' ></i></a></i></a>  <a href=index.php?controller=inscrire&action=listeetud&id_groupe=".$tab->id_groupe."><i class='fa fa-list-ul' ></i></a></td>
               </tr>
 ";}
 			 ?>
